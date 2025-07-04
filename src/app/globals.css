@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme {
+  --color-vermilion-900: #FC5F2B;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-anim-1 {
+  0%, 40%, 100% {
+    opacity: 0.3;
+  }
+  20% {
+    opacity: 1;
+  }
+}
+
+@keyframes spinner-anim-2 {
+  0%, 40%, 100% {
+    opacity: 0.3;
+  }
+  20% {
+    opacity: 1;
+  }
+  animation-delay: 0.2s;
+}
+
+@keyframes spinner-anim-3 {
+  0%, 40%, 100% {
+    opacity: 0.3;
+  }
+  20% {
+    opacity: 1;
+  }
+  animation-delay: 0.4s;
+}
+
+@keyframes line-indicator {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.spinner-anim-1 {
+  animation: spinner-anim-1 1.2s infinite;
+}
+
+.spinner-anim-2 {
+  animation: spinner-anim-2 1.2s infinite;
+  animation-delay: 0.2s;
+}
+
+.spinner-anim-3 {
+  animation: spinner-anim-3 1.2s infinite;
+  animation-delay: 0.4s;
+}
+
+.animate-line-indicator {
+  animation: line-indicator 2s ease-in-out infinite;
+}
+
+.animate-marquee-slow {
+  animation: marquee 60s linear infinite;
+}
+
+.animate-marquee-fast {
+  animation: marquee 40s linear infinite;
+}
