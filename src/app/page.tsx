@@ -3,6 +3,7 @@ import { Navbar } from '@/components/Navbar';
 import ProtocolsSection from '@/components/ProtocolsSection';
 import AdvisorsSection from '@/components/AdvisorsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import TimelineSection from '@/components/TimelineSection';
 import PricingSection from '@/components/PricingSection';
 import Footer from '@/components/Footer';
 import FaqSection from '@/components/FaqSection';
@@ -16,6 +17,7 @@ export default function Home() {
       <ProtocolsSection />
       <AdvisorsSection />
       <TestimonialsSection />
+      <TimelineSection />
       <PricingSection />
       <FaqSection />
       <FinalSection />
